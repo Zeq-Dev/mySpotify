@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes spotlight {
+    0% {
+        background-image: radial-gradient(
+            circle at right top,
+            #2c2b2b -200%,
+            #070707 100%
+        );
+    }
+    12.5% {
+        background-image: radial-gradient(
+            circle at center top,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    25% {
+        background-image: radial-gradient(
+            circle at left top,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    37.5% {
+        background-image: radial-gradient(
+            circle at left center,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    50% {
+        background-image: radial-gradient(
+            circle at left bottom,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    62.5% {
+        background-image: radial-gradient(
+            circle at center bottom,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    75% {
+        background-image: radial-gradient(
+            circle at right bottom,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+    100% {
+        background-image: radial-gradient(
+            circle at right center,
+            #444343 -200%,
+            #070707 100%
+        );
+    }
+}
+
+.container {
+    background-color: #0c0c0c;
+    background-image: url(http://noisepng.com/100-100-4.png);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    /* border: 1px solid red; */
+    width: 70vw;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 55px;
+}
+
+.player {
+    /* border: 1px solid blue; */
+    width: 40%;
+    height: 100%;
+}
+
+.details {
+    /* border: 1px solid yellow; */
+    width: 60vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.song_cover {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.details h1 {
+    color: white;
+    font-family: 'Lato';
+    font-size: 5em;
+    transition: all 500ms linear;
+}
+
+.details h2 {
+    color: white;
+    font-family: 'Lato';
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.prog-container {
+    /* border: 1px solid #1ED661; */
+    margin-top: 5%;
+    height: max-content;
+    color: white;
+}
+
+.duration-bar {
+    background-color: white;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.prog-bar {
+    width: 0%;
+    background-color: #1ED661;
+    height: 100%;
+    border-radius: 5px;
+}

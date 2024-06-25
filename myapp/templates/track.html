@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block head %} 
+    <title>ProjectA | Track</title>
+    <link rel="stylesheet" href={% static "css/track.css" %}>
+    <script defer src={% static "js/track.js" %}></script>
+{% endblock head %}
+{% block content %} 
+
+    <div class="container">
+        <div class="main">
+            <div class="player">
+                <img src="{{ song_cover }}" id="song-cover" class="song_cover">
+            </div>
+            <div class="details">
+                <h1 id='song-name'>{{ song_name }}</h1>
+                <h2 id='artist'>{{ song_artist|join:", " }}</h2>
+                <div class="prog-container">
+                    {% comment %} <div class="time" id='current-time'>
+                        {{ song_prog }}
+                    </div> {% endcomment %}
+                    <div class="duration-bar">
+                        <div class="prog-bar" id='prog-bar'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

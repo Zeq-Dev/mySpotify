@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import mimetypes
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-08dpu$)5g-x21)t#k@l$n*8n)xp=dwmzo^efncomab)ubc0o(3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['192.168.1.31', '127.0.0.1', '.vercel.app']
 
@@ -118,6 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/myapp/static/'
+mimetypes.add_type("/myapp/static/", ".css", True)
 
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, '/myapp/static/')
